@@ -51,7 +51,7 @@ lib_fixups: lib_fixups_user_type = {
         'libQnnHtp',
         'libQnnHtpPrepare',
         'libQnnHtpV73Stub',
-        'vendor.oplus.hardware.communicationcenter-V1-ndk',
+        'vendor.oplus.hardware.communicationcenter-V2-ndk',
         'vendor.oplus.hardware.performance-V1-ndk',
         'vendor.oplus.hardware.stability.oplus_project-V1-ndk',
         'vendor.pixelworks.hardware.display@1.0',
@@ -82,11 +82,7 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libprocessgroup_shim.so'),
     'product/etc/sysconfig/com.android.hotwordenrollment.common.util.xml': blob_fixup()
         .regex_replace('/my_product', '/product'),
-    'system_ext/lib64/libwfdmmsrc_system.so': blob_fixup()
-        .add_needed('libgui_shim.so'),
     'system_ext/lib64/libwfdnative.so': blob_fixup()
-        .add_needed('libbinder_shim.so')
-        .add_needed('libinput_shim.so')
         .replace_needed('android.hidl.base@1.0.so', 'libhidlbase.so'),
     'system_ext/lib64/libwfdservice.so': blob_fixup()
         .replace_needed('android.media.audio.common.types-V2-cpp.so', 'android.media.audio.common.types-V4-cpp.so'),
@@ -94,10 +90,7 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('android.hardware.security.rkp-V3-ndk.so'),
     ('vendor/etc/media_codecs_crow_v0.xml', 'vendor/etc/media_codecs_crow_v1.xml', 'vendor/etc/media_codecs_crow_v2.xml'): blob_fixup()
         .regex_replace('.*media_codecs_(google_audio|google_c2|google_telephony|google_video|vendor_audio).*\n', ''),
-    ('vendor/etc/seccomp_policy/atfwd@2.0.policy', 'vendor/etc/seccomp_policy/wfdhdcphalservice.policy'): blob_fixup()
-        .add_line_if_missing('gettid: 1'),
     'vendor/etc/seccomp_policy/qwesd@2.0.policy': blob_fixup()
-        .add_line_if_missing('gettid: 1')
         .add_line_if_missing('pipe2: 1'),
     'vendor/lib64/libqcodec2_core.so': blob_fixup()
         .add_needed('libcodec2_shim.so'),
