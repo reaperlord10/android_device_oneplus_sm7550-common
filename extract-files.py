@@ -72,6 +72,11 @@ lib_fixups: lib_fixups_user_type = {
     (
         'libagmclient',
         'libpalclient',
+        'libar-acdb',
+        'libar-gsl',
+        'liblx-osal',
+        'libats',
+        'vendor.qti.hardware.AGMIPC@1.0-impl',
     ): lib_fixup_remove,
 }
 

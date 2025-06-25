@@ -46,12 +46,16 @@ PRODUCT_PACKAGES += \
     libagm_pcm_plugin \
     libbatterylistener \
     libfmpal \
+    libats \
     libhfp_pal \
     libqcompostprocbundle \
     libqcomvisualizer \
     libqcomvoiceprocessing \
-    libsndcardparser \
     libvolumelistener \
+    vendor.qti.hardware.AGMIPC@1.0-impl \
+    lib_bt_aptx \
+    lib_bt_ble \
+    lib_bt_bundle \
     sound_trigger.primary.crow
 
 AUDIO_HAL_DIR := hardware/qcom-caf/sm8550/audio/primary-hal
