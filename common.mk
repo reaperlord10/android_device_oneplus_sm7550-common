@@ -42,13 +42,11 @@ PRODUCT_PACKAGES += \
     libagm_pcm_plugin \
     libbatterylistener \
     libfmpal \
-    libats \
     libhfp_pal \
     libqcompostprocbundle \
     libqcomvisualizer \
     libqcomvoiceprocessing \
     libvolumelistener \
-    vendor.qti.hardware.AGMIPC@1.0-impl \
     lib_bt_aptx \
     lib_bt_ble \
     lib_bt_bundle \
@@ -213,9 +211,6 @@ PRODUCT_COPY_FILES += \
     $(AUDIO_HAL_DIR)/configs/common/codec2/media_codecs_c2_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_c2_audio.xml \
     $(AUDIO_HAL_DIR)/configs/common/codec2/service/1.0/c2audio.vendor.base-arm64.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/c2audio.vendor.base-arm64.policy \
     $(AUDIO_HAL_DIR)/configs/common/codec2/service/1.0/c2audio.vendor.ext-arm64.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/c2audio.vendor.ext-arm64.policy
-
-PRODUCT_PACKAGES += \
-    libpalclient
 
 # Memtrack
 PRODUCT_PACKAGES += \
