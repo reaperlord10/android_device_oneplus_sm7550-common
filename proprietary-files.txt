@@ -363,6 +363,7 @@ vendor/lib64/libdiag.so
 vendor/lib64/vendor.qti.diaghal@1.0.so;MODULE_SUFFIX=_vendor
 
 # Display (Features)
+odm/etc/init/hw/init.oplus.display.rc
 vendor/bin/feature_enabler_client
 vendor/etc/Oplus_QC_LTM_Dev_2020_10_30.pfm
 vendor/etc/Oplus_QC_LTM_SM7550_2023_12_19.pfm
@@ -1253,6 +1254,7 @@ vendor/lib64/libesesbprovision.so
 
 # Sensors
 odm/bin/oplus_sensor_fb
+odm/etc/init/init.oplus.sensor.rc
 odm/lib64/liboplus_service.so
 vendor/bin/hw/vendor.qti.hardware.sensorscalibrate@1.0-service
 vendor/bin/init.qcom.sensors.sh
