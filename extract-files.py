@@ -52,7 +52,6 @@ lib_fixups: lib_fixups_user_type = {
         'libQnnHtpPrepare',
         'libQnnHtpV73Stub',
         'vendor.oplus.hardware.communicationcenter-V2-ndk',
-        'vendor.oplus.hardware.performance-V1-ndk',
         'vendor.oplus.hardware.stability.oplus_project-V1-ndk',
         'vendor.pixelworks.hardware.display@1.0',
         'vendor.pixelworks.hardware.display@1.1',
@@ -81,9 +80,6 @@ lib_fixups: lib_fixups_user_type = {
 }
 
 blob_fixups: blob_fixups_user_type = {
-    'odm/bin/hw/vendor-oplus-hardware-performance-V1-service': blob_fixup()
-        .add_needed('libbase_shim.so')
-        .add_needed('libprocessgroup_shim.so'),
     'product/etc/sysconfig/com.android.hotwordenrollment.common.util.xml': blob_fixup()
         .regex_replace('/my_product', '/product'),
     'system_ext/bin/wfdservice64': blob_fixup()
