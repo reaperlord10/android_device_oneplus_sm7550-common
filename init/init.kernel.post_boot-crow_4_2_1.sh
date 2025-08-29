@@ -31,10 +31,6 @@ echo 255 > /proc/sys/walt/sched_util_busy_hysteresis_enable_cpus
 echo 8500000 8500000 8500000 8500000 5000000 5000000 2000000 > /proc/sys/walt/sched_util_busy_hyst_cpu_ns
 echo 1 1 1 1 15 15 15 > /proc/sys/walt/sched_util_busy_hyst_cpu_util
 
-# cpuset parameters
-echo 0-3 > /dev/cpuset/background/cpus
-echo 0-3 > /dev/cpuset/system-background/cpus
-
 # Turn off scheduler boost at the end
 echo 0 > /proc/sys/walt/sched_boost
 
