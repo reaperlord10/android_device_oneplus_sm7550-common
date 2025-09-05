@@ -690,7 +690,6 @@ system_ext/bin/horae
 system_ext/etc/horae/horae.conf
 system_ext/etc/horae/horae_SM7550.conf
 system_ext/etc/init/horae.rc
-system_ext/lib64/vendor.oplus.hardware.charger-V1-ndk.so
 system_ext/lib64/vendor.oplus.hardware.displaypanelfeature@1.0.so
 
 # Hotword Enrollment
@@ -907,7 +906,14 @@ odm/lib64/libQnnSaver.so
 odm/lib64/libaiboost_te.so;FIX_SONAME
 odm/lib64/libc++_shared.so
 
-# OSENSE
+# OPLUS Charger
+odm/bin/hw/vendor.oplus.hardware.charger-V6-service
+odm/etc/init/vendor.oplus.hardware.charger-V6-service.rc
+odm/etc/vintf/manifest/manifest_oplus_charger_aidl.xml
+odm/etc/charge.cfg
+odm/lib64/libGaiaClient_vnd.so
+
+# OPLUS OSense
 odm/lib64/libosenseaidlhalclient.so
 
 # OPLUS Project
